@@ -30,7 +30,7 @@ git add .
 git commit -m "feat: ajout du modèle Product et du ProductRepository JPA"
 git push -u origin feature/product-model
 git checkout main
-git merge feature/product-model
+
 git push origin main
 ```
 
