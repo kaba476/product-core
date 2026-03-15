@@ -1,4 +1,3 @@
-C:\Users\akeit\OneDrive\Documents\Devops\product-core\src\main\java\com\product\core\model\Product.java
-C:\Users\akeit\OneDrive\Documents\Devops\product-core\src\main\java\com\product\core\service\ProductService.java
-C:\Users\akeit\OneDrive\Documents\Devops\product-core\src\main\java\com\product\core\App.java
-C:\Users\akeit\OneDrive\Documents\Devops\product-core\src\main\java\com\product\core\repository\ProductRepository.java
+/home/noxemilien/product-core/src/main/java/sn/isi/l3gl/core/model/Product.java
+/home/noxemilien/product-core/src/main/java/sn/isi/l3gl/core/service/ProductService.java
+/home/noxemilien/product-core/src/main/java/sn/isi/l3gl/core/repository/ProductRepository.java

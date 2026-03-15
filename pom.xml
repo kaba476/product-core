@@ -11,9 +11,9 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.product</groupId>
+    <groupId>sn.isi.l3gl.core</groupId>
     <artifactId>product-core</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.4.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>product-core</name>
@@ -22,13 +22,11 @@
     <properties>
         <java.version>17</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -36,26 +34,28 @@
         </dependency>
     </dependencies>
 
-    <distributionManagement>
+    <!-- ca c'est pour toi baltha avec le ngrok -->
+    <!-- <distributionManagement>
         <repository>
-            <id>nexus-releases</id>
-            <url>https://picaresque-dilatometrically-demetria.ngrok-free.dev/repository/maven-releases/</url>
+            <id>mavenDevops-releases</id>
+            <url>https://picaresque-dilatometrically-demetria.ngrok-free.dev/repository/mavenDevops-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>https://picaresque-dilatometrically-demetria.ngrok-free.dev/repository/maven-snapshots/</url>
+            <id>mavenDevops-snapshots</id>
+            <url>https://picaresque-dilatometrically-demetria.ngrok-free.dev/repository/mavenDevops-snapshots/</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement> -->
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <classifier>exec</classifier>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <distributionManagement>
+    <snapshotRepository>
+        <id>mavenDevops-snapshots</id>
+        <url>http://localhost:8081/repository/mavenDevops-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+        <id>mavenDevops-releases</id>
+        <url>http://localhost:8081/repository/mavenDevops-releases/</url>
+    </repository>
+</distributionManagement>
+
+  
 </project>

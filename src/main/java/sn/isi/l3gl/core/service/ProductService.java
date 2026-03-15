@@ -1,9 +1,8 @@
-package com.product.core.service;
+package sn.isi.l3gl.core.service;
 
-import com.product.core.model.Product;
-import com.product.core.repository.ProductRepository;
+import sn.isi.l3gl.core.model.Product;
+import sn.isi.l3gl.core.repository.ProductRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -16,11 +15,11 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public Product addProduct(Product product) {
+    public Product createProduct(Product product) {
         return productRepository.save(product);
     }
 
-    public List<Product> listAllProducts() {
+    public List<Product> listProducts() {
         return productRepository.findAll();
     }
 
@@ -30,8 +29,9 @@ public class ProductService {
             Product product = optional.get();
             product.setQuantity(newQuantity);
             return productRepository.save(product);
+        } else {
+            throw new RuntimeException("Produit introuvable avec l'id : " + id);
         }
-        throw new RuntimeException("Produit introuvable avec l'id : " + id);
     }
 
     public long countLowStockProducts() {
